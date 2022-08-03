@@ -11,7 +11,9 @@
     <form method="post">
         {% csrf_token %}
         {{form.as_p}}
-        <input type="submit" value="Save Card">
+        <a href="{% url 'card-create' %}" role="button">
+            📍 Save Card
+        </a>    
     </form>
     <a href="{% url 'card-list' %}">
         Cancel
